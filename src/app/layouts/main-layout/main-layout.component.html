@@ -1,55 +1,43 @@
-<!-- Top Navbar -->
-<div class="top-navbar d-none d-lg-block">
-  <div class="container">
-    <div class="row">
-      <div class="col text-center">
-        <p class="mb-0">
-          <i class="bi bi-truck"></i> Commander, Confirmer et payer à la
-          livraison
-        </p>
-      </div>
-    </div>
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container text-center">
+    <p class="mb-0">
+      <i class="bi bi-truck"></i> Commander, Confirmer et payer à la livraison
+    </p>
   </div>
 </div>
 
-<!-- Main Navbar -->
-<nav class="navbar navbar-expand-lg main-navbar sticky-top">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg sticky-top">
   <div class="container">
-    <a class="navbar-brand" routerLink="/">
-      <img src="assets/your-logo.png" alt="Logo" />
-    </a>
-
+    <a class="navbar-brand" href="#">MAPLENOU</a>
     <button
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
-      data-bs-target="#navbarMain"
+      data-bs-target="#navbarNav"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="collapse navbar-collapse" id="navbarMain">
-      <ul class="navbar-nav me-auto">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/">Accueil</a>
+          <a class="nav-link" href="#">Mode</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="#">Mode</a>
+          <a class="nav-link" href="#">Electronique</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="#">Électronique</a>
+          <a class="nav-link" href="#">Electromenager</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="#">Électroménager</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="#">Contact</a>
+          <a class="nav-link" href="#">Contact</a>
         </li>
       </ul>
-
-      <div class="nav-icons">
-        <a routerLink="#" class="nav-link"><i class="bi bi-search"></i></a>
-        <!-- <a routerLink="/cart" class="nav-link"><i class="bi bi-bag"></i></a> -->
+      <div class="d-flex align-items-center">
+        <a href="#" class="nav-link">
+          <i class="bi bi-person"> Mon Compte</i>
+        </a>
       </div>
     </div>
   </div>
@@ -57,13 +45,7 @@
 
 <!-- Main Content -->
 <div class="main-content">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-9">
-        <router-outlet></router-outlet>
-      </div>
-    </div>
-  </div>
+  <router-outlet></router-outlet>
 </div>
 
 <!-- Footer -->
@@ -72,39 +54,35 @@
     <div class="row">
       <div class="col-md-3 mb-4">
         <h5>À propos</h5>
-        <p>
-          Votre description d'entreprise ici. Nous nous engageons à fournir les
-          meilleurs produits et services.
-        </p>
+        <p>Une nouvelle approche du luxe moderne et accessible.</p>
+        <div class="social-links">
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+        </div>
       </div>
       <div class="col-md-3 mb-4">
-        <h5>Liens utiles</h5>
-        <ul class="list-unstyled">
-          <li><a routerLink="/about">À propos</a></li>
-          <li><a routerLink="/contact">Contact</a></li>
-          <li><a routerLink="/faq">FAQ</a></li>
+        <h5>Service client</h5>
+        <ul class="footer-links">
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Livraison</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 mb-4">
+        <h5>Informations</h5>
+        <ul class="footer-links">
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Carrières</a></li>
+          <li><a href="#">politique de confidentialité</a></li>
         </ul>
       </div>
       <div class="col-md-3 mb-4">
         <h5>Contact</h5>
-        <ul class="list-unstyled">
-          <li><i class="bi bi-geo-alt"></i> Adresse: Votre adresse ici</li>
-          <li><i class="bi bi-telephone"></i> Tél: +1234567890</li>
-          <li><i class="bi bi-envelope"></i> Email:</li>
+        <ul class="footer-links">
+          <li>Lome, TOGO</li>
+          <li>+228 91 20 57 25</li>
+          <li>maplenougmail.com</li>
         </ul>
-      </div>
-      <div class="col-md-3 mb-4">
-        <h5>Newsletter</h5>
-        <form class="newsletter-form">
-          <div class="input-group">
-            <input
-              type="email"
-              class="form-control"
-              placeholder="Votre email"
-            />
-            <button class="btn btn-primary" type="submit">S'abonner</button>
-          </div>
-        </form>
       </div>
     </div>
   </div>
