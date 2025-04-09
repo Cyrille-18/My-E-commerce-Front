@@ -1,0 +1,66 @@
+<section class="popular-products">
+  <div class="container">
+    <div class="section-header">
+      <div class="header-left">
+        <h2 class="section-title">En Promotion</h2>
+      </div>
+      <a href="#" class="view-all">
+        Voir tout
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="products-slider-wrapper">
+      <div #slider class="products-slider" (scroll)="onScroll()">
+        <div class="product-card" *ngFor="let product of products">
+          <div class="product-image-container">
+            <img
+              [src]="product.imageUrl"
+              [alt]="product.title"
+              class="product-image"
+            />
+            <div class="product-badges">
+              <span class="discount-badge"
+                >-{{ product.discountPercentage }}%</span
+              >
+              <span class="promo-badge" *ngIf="product.badge">{{
+                product.badge
+              }}</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">{{ product.title }}</h3>
+            <p class="product-size">{{ product.size }}</p>
+            <div class="price-container">
+              <p class="discounted-price">CFA{{ product.discountedPrice }}</p>
+              <p class="original-price">CFA{{ product.originalPrice }}</p>
+              <span class="savings"
+                >Économisez CFA{{
+                  product.originalPrice - product.discountedPrice
+                }}</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-dots">
+        <div
+          *ngFor="let dot of dots; let i = index"
+          class="slider-dot"
+          [class.active]="currentDot === i"
+          (click)="scrollTo(i)"
+        ></div>
+      </div>
+    </div>
+  </div>
+</section>
