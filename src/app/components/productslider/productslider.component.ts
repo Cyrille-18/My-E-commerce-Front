@@ -5,7 +5,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
-import { Product } from '../../interface/productinterface'; // Assurez-vous d'avoir ce modèle défini
+import { Product } from '../../interface/productinterface';
 import { CommonModule } from '@angular/common';
 
 @Component({
